@@ -1,4 +1,8 @@
-Password = "1615"
+Password = ()=> {
+    let date = new Date();
+    let hm = `${date.getHours() < 10 ?'0':''}${date.getHours()}${date.getMinutes()<10?'0':''}${date.getMinutes()}`
+    return hm
+}
 let saveURLpublic = []
 let saveURLprivate = []
 let passCheck = false
@@ -123,7 +127,7 @@ tabBtn.addEventListener("click", function(){
 //change mode public to private
 privateCbox.addEventListener("change",()=>{
     if (privateCbox.checked){
-        setPassword(Password);
+        setPassword(Password());
         let getPass = prompt("Enter your password: ");
         if (!getPass){
             privateCbox.checked = false;
