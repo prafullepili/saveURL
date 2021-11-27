@@ -7,7 +7,7 @@ body {
     overflow: auto;
 }
 
-input {
+#input-el {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
@@ -15,7 +15,7 @@ input {
     border-radius: 5px;
     margin-bottom: 10px;
 }
-input:focus {
+#input-el:focus {
     outline: 1px solid  #5f9341;
 }
 .btn-container {
@@ -37,8 +37,7 @@ button:active {
     border: 1px solid black;
 }
 #delete-btn:active {
-    background-color: rgba(128, 128, 128, 0.3);
-    
+    background-color: rgba(128, 128, 128, 0.3);    
 }
 #delete-btn {
     background-color: white;
@@ -46,6 +45,12 @@ button:active {
     margin-left: auto;    
     border-radius: 5px;
     font-size: 12px;
+}
+#privateLabel {
+    margin: auto 0;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
 }
 .notFound {    
     padding: 5px 5px 5px 0px;

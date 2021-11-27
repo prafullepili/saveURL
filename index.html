@@ -1,5 +1,5 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <link rel="stylesheet" href="index.css">
 </head>
@@ -10,20 +10,16 @@
         <div class="btn-container">
             <button id="input-btn" type='submit'>SAVE INPUT</button>
             <button id="tab-btn" type="button">SAVE TAB</button>
+            <label for="private" id="privateLabel">
+                <input type="checkbox" id="private" name="private" value="on">
+                <input type="checkbox" id="private" name='private' value='off' hidden> private </label>
             <button id="delete-btn" type="button">DELETE ALL</button>
         </div>
     </form>
+
     <ul id="ul-el">
     </ul>
-    <script src="index.js"></script>
     <script src="aes.js"></script>
-
-    <script>
-        // var encoded = CryptoJS.AES.encrypt(JSON.stringify("Praful"), "1615", {format: JSON}).ciphertext.toString();
-        // localStorage.setItem("secret_stuff", encoded);
-
-        // var stored = localStorage.getItem("secret_stuff");
-    </script>
+    <script src="index.js"></script>
 </body>
-
 </html>
