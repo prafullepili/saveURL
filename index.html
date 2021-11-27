@@ -6,23 +6,24 @@
 
 <body>
     <form id="url-form">
-        <input type="URL" id="input-el" placeholder="Enter URL">
+        <input type="URL" id="input-el" placeholder="Enter URL" autocomplete="off">
         <div class="btn-container">
             <button id="input-btn" type='submit'>SAVE INPUT</button>
-            <button id="tab-btn">SAVE TAB</button>
-            <button id="delete-btn">DELETE ALL</button>
+            <button id="tab-btn" type="button">SAVE TAB</button>
+            <button id="delete-btn" type="button">DELETE ALL</button>
         </div>
     </form>
     <ul id="ul-el">
     </ul>
     <script src="index.js"></script>
-    <!-- <script src="aes.js"></script>
-    <script>
-        var encoded = CryptoJS.AES.encrypt(JSON.stringify("Praful"), "1615", {format: JSON}).ciphertext.toString();
-        localStorage.setItem("secret_stuff", encoded);
+    <script src="aes.js"></script>
 
-        var stored = localStorage.getItem("secret_stuff");
-    </script> -->
+    <script>
+        // var encoded = CryptoJS.AES.encrypt(JSON.stringify("Praful"), "1615", {format: JSON}).ciphertext.toString();
+        // localStorage.setItem("secret_stuff", encoded);
+
+        // var stored = localStorage.getItem("secret_stuff");
+    </script>
 </body>
 
 </html>

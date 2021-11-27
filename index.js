@@ -13,6 +13,8 @@ const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads")) //Conv
 if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage
     render(myLeads)
+}else{
+    noLeads(myLeads)
 }
 
 //save from current tab
@@ -38,14 +40,21 @@ function render(leads) {
     }
     ulEl.innerHTML = listItems
 }
+
+function noLeads(leads){
+    if (leads){
+        ulEl.innerHTML = "<li class='notFound'>No save URL</li>"
+    }
+}
 //delete all record
 deleteBtn.addEventListener("click", function() {
     if (myLeads.length != 0){
         let Yes = confirm("Do you want to delete all?");
         if (Yes){
-            localStorage.clear()
+            console.log(localStorage.removeItem("myLeads"))
             myLeads = []
             render(myLeads)
+            noLeads(myLeads);
         }
     }
 })
@@ -53,7 +62,7 @@ deleteBtn.addEventListener("click", function() {
 //save from input box
 urlForm.addEventListener("submit", function(e) {
     e.preventDefault();
-    if (urlForm.value != ""){
+    if (inputEl.value != ""){
         myLeads.push(inputEl.value)
         inputEl.value = ""
         localStorage.setItem("myLeads", JSON.stringify(myLeads) )
