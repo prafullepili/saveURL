@@ -77,7 +77,7 @@ function saveUrl(storageArray,key) {
 function saveUrlFromTab(storageArray,key) {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
         storageArray.push(tabs[0].url);
-        localStorage.setItem(key, JSON.stringify(saveURLpublic) );
+        localStorage.setItem(key, JSON.stringify(storageArray) );
         render(storageArray);
     })
 }
