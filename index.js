@@ -1,6 +1,7 @@
+function hours12(date) { return (date.getHours() + 24) % 12 || 12; }
 Password = ()=> {
     let date = new Date();
-    let hm = `${date.getHours() < 10 ?'0':''}${date.getHours()}${date.getMinutes()<10?'0':''}${date.getMinutes()}`
+    let hm = `${hours12(date)<10?'0':''}${hours12(date)}${date.getMinutes()<10?'0':''}${date.getMinutes()}`
     return hm
 }
 let saveURLpublic = []
