@@ -10,4 +10,4 @@ I learnt form scrimba.com.
 #### 4) Click load unpacked at left top.
 #### 5) Select downloaded folder "saveURL"
 
-### password is currently time(12hr format)
+### password is currently time(12hr format) 2:50pm => 0250
